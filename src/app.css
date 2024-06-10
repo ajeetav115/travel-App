@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap')
+
+
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+font-family: "Poppins", sans-serif;
+}
+
+/*colors and styling */
+:root{
+    --primarycolor:hsl(199,100%,33%);
+    --secondarycolor:  hsl(187,85%,43%);
+    --gradientcolor: linear-gradient(to right, hsl(187, 85%, 43%),hsl(199,100%,33%));  
+    --whitecolor: hsl(0, 0%, 100%);
+    --blackecolor: hsl(201, 33%, 16%);
+    --textcolor: hsl(240, 4%, 36%);
+    --whitecolordeam: hsl(0, 0%, 93%);
+    --greytext: hsl(190, 190, 190);
+    --inputcolor: hsl(239, 239, 239);
+    --bodycolor: hsl(240, 240, 246);
+    --cardBG: rgb(225,225,235);
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+.section{
+    padding: 4rem 0 2rem;
+}
+
+.container{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.icon{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+.header{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: var(--whitecolordeam);
+    width: 100%;
+  padding: 1%;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(2, 15,29 ,0.904);
+
+  .logo{
+    color: var(--blackecolor);
+    font-weight: 600;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+
+    .icon{
+        font-size: 25px;
+        color: var(--primarycolor);
+        transform: translate(5px);
+    }
+  }
+  
+}
+
+.grid{
+    display: grid;
+    align-items: center;
+}
+
+.btn{
+    padding: .6rem  1.5rem;
+    background: var(--gradientcolor);
+    border-radius: 3rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn a{
+    color: var(--whitecolor);
+    font-weight: 500;
+}
+
+.btn:hover{
+    background: var(--secondarycolor);
+}
+
+img, video{
+    width: 100%;
+    height: auto;
+}
+
+input{
+    font-size: 100%;
+}
+
+body{
+    background: var(--bodycolor);
+}
+
+
+.navItem{
+    margin: 20px;
+    font-size: large;
+}
+
+
+/*media queries */
+
+@media screen and (min-width: 1240) {
+    .container{
+        width: 80% !important;
+        margin: auto !important ;
+    }
+    
+    .section{
+        padding: 6rem 0 4rem;
+    }
+}
+
+@media screen and (min-width: 2560px){
+    body{
+        zoom: 1.7;
+    }
+}
+@media screen and (max-width: 964px){
+   .btn{
+    display: none;
+   }
+}
+@media screen and (max-width: 964px){
+    .navLists{
+     display: none;
+    }
+ }
+
+ @media screen and (max-width: 580px){
+    .header{
+        display:none;
+    }
+ }
